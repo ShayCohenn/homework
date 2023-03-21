@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="mainPage" class="mainPage">
+        <div class="text1">
+            <input type="text" id="textbox1" placeholder="write numbers between 0 and 50">
+            <button id="btn1" onclick="func1()">CLICK</button>
+        </div>
+        <div class="text2">
+            <input type="text" id="textbox2" placeholder="type 2 3 or 4 to change the background">
+            <button id="btn2" onclick="func2()">CLICK</button>
+        </div>
+    </div>
+    <script>
+        function func1() {
+            if (textbox1.value < 10) {
+                console.log(textbox1.value);
+                alert(textbox1.value);
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else if (textbox1.value > 10 && textbox1.value < 20) {
+                console.log(textbox1.value);
+                console.log(textbox1.value);
+                alert(textbox1.value + " " + textbox1.value)
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else if (textbox1.value > 19 && textbox1.value < 30) {
+                console.log("שם");
+                alert("שם");
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else if (textbox1.value > 29 && textbox1.value < 40) {
+                console.log(textbox1.value * 4);
+                alert(textbox1.value * 4);
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else if (textbox1.value > 39 && textbox1.value < 51) {
+                console.log(textbox1.value + 200);
+                alert(parseInt(textbox1.value) + 200)
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else
+                alert("LISTEN TO THE RULES!!!");
+                textbox1.value = "";
+                textbox2.value = "";
+        }
+        function func2() {
+            if (textbox2.value == 2){
+                document.getElementById("mainPage").style.background = "red";
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else if (textbox2.value == 3){
+                document.getElementById("mainPage").style.background = "green";
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else if (textbox2.value == 4){
+                document.getElementById("mainPage").style.background = "blue";
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+            else{
+                alert("LISTEN TO THE RULES!!!");
+                textbox1.value = "";
+                textbox2.value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
